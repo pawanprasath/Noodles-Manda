@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  background: linear-gradient(135deg,#fff0f5,#ffe4ec);
+}
+
+/* CENTER LAYOUT */
+.center {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+}
+
+/* TEDDY IMAGE */
+.teddy-img {
+  width: 220px;
+  max-width: 80%;
+}
+
+/* ANIMATIONS */
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.run {
+  animation: run 1.2s ease forwards;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes run {
+  from { transform: translateX(-200px); }
+  to { transform: translateX(0); }
+}
+
+/* BUTTON */
+.btn {
+  padding: 14px 36px;
+  border-radius: 999px;
+  border: none;
+  background: #ff6f91;
+  color: white;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+
+/* SPEECH BUBBLE */
+.bubble {
+  background: white;
+  padding: 14px 20px;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* LETTER FIX */
+#flowers {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.letter-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  z-index: 2; /* ✅ ABOVE CANVAS */
+}
+
+.letter {
+  background: white;
+  max-width: 380px;
+  padding: 26px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  animation: open 1.2s ease;
+}
+
+@keyframes open {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.sign {
+  margin-top: 14px;
+  font-weight: 600;
+  color: #2563eb;
+}
+/* FINAL PAGE */
+.final-page {
+  padding: 24px;
+}
+
+.final-img {
+  width: 220px;
+  max-width: 85%;
+  border-radius: 18px;
+  margin: 12px 0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.final-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 14px 0;
+}
